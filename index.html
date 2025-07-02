@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional Portfolio Website of Ram Morla">
+    <title>Ram Morla | Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Inter:wght@400;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="icon" type="image/png" href="https://avatars.githubusercontent.com/u/9919?s=200&v=4">
+    <script defer src="script.js"></script>
+</head>
+
+<body>
+    <!-- Scroll Progress Bar -->
+    <div id="scroll-progress"></div>
+    <!-- Confetti Celebration Canvas -->
+    <canvas id="confetti-canvas"></canvas>
+    <!-- Custom Cursor -->
+    <div id="custom-cursor"></div>
+    <!-- Futuristic Tech Video Background -->
+    <video id="video-bg" autoplay loop muted playsinline poster="./3130182-uhd_3840_2160_30fps1.mp4"
+        style="position:fixed;top:0;left:0;width:100vw;height:100vh;object-fit:cover;z-index:-2;opacity:0.55;filter:blur(2.5px) brightness(0.8) saturate(1.4) hue-rotate(180deg);pointer-events:none;">
+        <source src="./3130182-uhd_3840_2160_30fps1.mp4" type="video/mp4">
+        <!--<source src="./3129957-uhd_3840_2160_25fps.mp4" type="video/mp4">-->
+        <!-- Fallback image if video not supported -->
+    </video>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="logo"
+            style="font-family:'Orbitron', 'Inter', sans-serif;font-size:2.2rem;letter-spacing:4px;color:#00ffe7;text-shadow:0 2px 18px #00ffe7,0 1px 8px #0ff;">
+            Ram Morla</div>
+        <nav>
+            <ul id="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#education" class="nav-link">Education</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#timeline" class="nav-link">Timeline</a></li>
+                <li><a href="#blog" class="nav-link">Blog</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div style="min-width:1.5rem;display:inline-block;"></div>
+            <div id="burger" tabindex="0" aria-label="Open navigation menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" title="Back to top">↑</button>
+
+    <main>
+    <!-- Home / Hero Section -->
+    <section id="home" class="hero reveal">
+        <div class="hero-content">
+            <h1 class="hero-title" id="home-title" style="font-size:3.2rem;font-weight:900;letter-spacing:2px;">Hi, I'm <span
+                    style="color:var(--primary)">Ram Morla</span></h1>
+            <div class="hero-profession" id="typed-text"
+                style="font-size:1.6rem;font-weight:700;color:var(--accent);margin-bottom:1.2rem;">Full Stack Developer
+                & Tech Innovator</div>
+            <p class="hero-intro" style="font-size:1.18rem;max-width:600px;margin:0 auto 1.7rem auto;">I design and
+                build modern, scalable, and visually stunning web applications. My passion is solving complex problems
+                and delivering seamless digital experiences. Let's create something extraordinary together.</p>
+            <div class="hero-buttons" style="display:flex;gap:1.2rem;justify-content:center;">
+                <a href="#projects" class="project-link" style="font-size:1.1rem;padding:0.7rem 2.1rem;">View
+                    Projects</a>
+                <a href="#contact" class="project-link"
+                    style="background:var(--accent);color:var(--primary);border:none;font-size:1.1rem;padding:0.7rem 2.1rem;">Contact
+                    Me</a>
+                <a href="./Resume.pdf" download class="project-link"
+                    style="background:var(--primary);color:var(--bg);border:none;font-size:1.1rem;padding:0.7rem 2.1rem;">Download
+                    Resume</a>
+            </div>
+        </div>
+        <img src="./DSC00815.JPG" alt="Ram Morla Profile Photo" class="hero-img" loading="lazy"
+            style="width:260px;height:320px;object-fit:cover;box-shadow:0 8px 32px rgba(0,255,231,0.18),0 1.5px 8px rgba(0,255,231,0.08);border:4px solid #00ffe7;border-radius:18px;">
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="reveal">
+        <img src="./DSC00815.JPG" alt="About Ram Morla" class="about-img" loading="lazy"
+            style="width:180px;height:220px;object-fit:cover;box-shadow:0 8px 32px rgba(255,0,204,0.18),0 1.5px 8px rgba(0,255,231,0.08);border:4px dashed #ff00cc;border-radius:18px;">
+        <div class="about-content" style="align-items:center;text-align:center;margin-left:30px;">
+            <h2 class="about-title" id="about-title">About Me</h2>
+            <p class="about-bio">I'm an enthusiastic and motivated aspiring developer with a strong passion for
+                technology and learning. I enjoy exploring new programming languages, building creative projects, and
+                collaborating with others to solve real-world problems. My journey is just beginning, and I'm eager to
+                grow my skills and contribute to exciting tech innovations.</p>
+            <div class="about-goal"><strong>Career Goal:</strong> To become a skilled software engineer, work on
+                impactful projects, and make a positive difference in the tech world while continuously learning and
+                improving.</div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="reveal">
+        <h2 class="edu-title" id="education-title">Education</h2>
+        <div class="timeline">
+            <div class="timeline-item" tabindex="0" data-edu="btech">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <div class="timeline-degree">B.Tech. in Computer Science</div>
+                    <div class="timeline-institution">Chebrolu Engineering College</div>
+                    <div class="timeline-year">2022 - 2026</div>
+                </div>
+            </div>
+            <div class="timeline-item" tabindex="0" data-edu="inter">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <div class="timeline-degree">Intermediate in MPC </div>
+                    <div class="timeline-institution">Sri Vishaka Junior College</div>
+                    <div class="timeline-year">2020 - 2022</div>
+                </div>
+            </div>
+            <div class="timeline-item" tabindex="0" data-edu="ssc">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <div class="timeline-degree">SSC  </div>
+                    <div class="timeline-institution">Zilla Parishad High School</div>
+                    <div class="timeline-year">2015 - 2020</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section id="timeline" class="reveal">
+      <h2 class="timeline-title" id="timeline-title">Timeline</h2>
+      <div class="vertical-timeline">
+        <div class="vtimeline-item">
+          <div class="vtimeline-dot" style="background:#00ffe7;"></div>
+          <div class="vtimeline-content">
+            <div class="vtimeline-year">2022</div>
+            <div class="vtimeline-title">Started B.Tech in Computer Science</div>
+            <div class="vtimeline-desc">Began my undergraduate journey at Chebrolu Engineering College, focusing on software engineering and web development.</div>
+          </div>
+        </div>
+        <!--<div class="vtimeline-item">
+          <div class="vtimeline-dot" style="background:#ff00cc;"></div>
+          <div class="vtimeline-content">
+            <div class="vtimeline-year">2023</div>
+            <div class="vtimeline-title">Best Project Award</div>
+            <div class="vtimeline-desc">Received the Best Project Award for an innovative web app at college tech fest.</div>
+          </div>
+        </div>
+        <div class="vtimeline-item">
+          <div class="vtimeline-dot" style="background:#ffd700;"></div>
+          <div class="vtimeline-content">
+            <div class="vtimeline-year">2024</div>
+            <div class="vtimeline-title">CodeFest Winner</div>
+            <div class="vtimeline-desc">Secured 1st place in CodeFest 2024, a national-level coding competition.</div>
+          </div>
+        </div>-->
+        <div class="vtimeline-item">
+          <div class="vtimeline-dot" style="background:#00ffe7;"></div>
+          <div class="vtimeline-content">
+            <div class="vtimeline-year">2025</div>
+            <div class="vtimeline-title">Portfolio Launch</div>
+            <div class="vtimeline-desc">Launched this futuristic portfolio website, showcasing my skills and projects to the world.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="reveal">
+        <h2 class="skills-title" id="skills-title">Skills</h2>
+        <!-- Animated Stats Counters -->
+        <div class="stats-section">
+          <div class="stat-card">
+            <div class="stat-number" data-count="7">0</div>
+            <div class="stat-label">Skills</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number" data-count="3">0</div>
+            <div class="stat-label">Projects</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number" data-count="10">0</div>
+            <div class="stat-label">Blog Posts</div>
+          </div>
+        </div>
+        <div class="skills-auto-carousel-outer transparent-carousel">
+          <div class="skills-auto-carousel-track">
+            <!-- Skill cards will be injected here by JS -->
+          </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="reveal">
+        <h2 class="projects-title" id="projects-title">Projects</h2>
+        <div class="projects-grid" style="margin-left:-40px;">
+            <div class="project-card">
+                <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=400&q=80"
+                    alt="Portfolio Website" class="project-img" loading="lazy">
+                <div class="project-content">
+                    <div class="project-title">Portfolio Website</div>
+                    <div class="project-desc">A modern, responsive personal portfolio built with HTML, CSS, and
+                        JavaScript. Features dark/light mode, animations, and a contact form.</div>
+                    <div class="project-links">
+                        <a href="https://github.com/rammorla/portfolio" class="project-link" target="_blank"
+                            rel="noopener">GitHub</a>
+                        <a href="#" class="project-link" target="_blank" rel="noopener">Live Demo</a>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80"
+                    alt="Task Manager App" class="project-img" loading="lazy">
+                <div class="project-content">
+                    <div class="project-title">Task Manager App</div>
+                    <div class="project-desc">A full-stack task manager with user authentication, real-time updates, and
+                        RESTful API integration.</div>
+                    <div class="project-links">
+                        <a href="https://github.com/rammorla/task-manager" class="project-link" target="_blank"
+                            rel="noopener">GitHub</a>
+                        <a href="#" class="project-link" target="_blank" rel="noopener">Live Demo</a>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80"
+                    alt="Blog Platform" class="project-img" loading="lazy">
+                <div class="project-content">
+                    <div class="project-title">Blog Platform</div>
+                    <div class="project-desc">A blogging platform with markdown support, user profiles, and a custom CMS
+                        dashboard.</div>
+                    <div class="project-links">
+                        <a href="https://github.com/rammorla/blog-platform" class="project-link" target="_blank"
+                            rel="noopener">GitHub</a>
+                        <a href="#" class="project-link" target="_blank" rel="noopener">Live Demo</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="reveal">
+      <h2 class="blog-title" id="blog-title">Blog</h2>
+      <div class="blog-grid">
+        <div class="blog-card">
+          <div class="blog-meta">
+            <span class="blog-date">June 30, 2025</span>
+          </div>
+          <div class="blog-card-title">How I Built My Futuristic Portfolio</div>
+          <div class="blog-card-summary">A behind-the-scenes look at the design, tech stack, and creative process for this portfolio website. Includes tips for glassmorphism, video backgrounds, and more.</div>
+          <a href="#" class="blog-readmore">Read More</a>
+        </div>
+        <div class="blog-card">
+          <div class="blog-meta">
+            <span class="blog-date">June 15, 2025</span>
+          </div>
+          <div class="blog-card-title">Mastering Responsive Design in 2025</div>
+          <div class="blog-card-summary">Key strategies and CSS tricks for building beautiful, responsive layouts that work on any device. Includes code samples and live demos.</div>
+          <a href="#" class="blog-readmore">Read More</a>
+        </div>
+        <div class="blog-card">
+          <div class="blog-meta">
+            <span class="blog-date">May 28, 2025</span>
+          </div>
+          <div class="blog-card-title">Dark Mode & Glassmorphism: Modern UI Trends</div>
+          <div class="blog-card-summary">Explore the latest UI/UX trends, including dark mode, glassmorphism, and neon effects. Learn how to implement them in your own projects.</div>
+          <a href="#" class="blog-readmore">Read More</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="reveal">
+    <h2 class="contact-title" id="contact-title">Contact Me</h2>
+    <form id="contact-form" class="contact-form" autocomplete="off" novalidate>
+        <input type="text" name="name" placeholder="Your Name" required>
+        <div class="form-error" id="name-error"></div>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <div class="form-error" id="email-error"></div>
+        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+        <div class="form-error" id="message-error"></div>
+        <button type="submit">Send Message</button>
+    </form>
+    <div class="social-links">
+        <a href="https://github.com/Sivarammorla75" class="social-link" target="_blank" rel="noopener">🐙</a>
+        <a href="https://www.linkedin.com/in/morla-sambasivaram-8a691133b" class="social-link" target="_blank" rel="noopener">💼</a>
+        <a href="mailto:sivarammorla123@gmail.com" class="social-link">✉️</a>
+        <a href="https://twitter.com/rammorla" class="social-link" target="_blank" rel="noopener">🐦</a>
+    </div>
+</section>
+
+    <!-- Education Detail Modal (re-added, hidden by default) -->
+    <div id="edu-detail-modal" class="edu-modal" style="display:none;">
+        <div class="edu-modal-content">
+            <span class="edu-modal-close" tabindex="0">&times;</span>
+            <div id="edu-modal-body"></div>
+        </div>
+    </div>
+
+    <footer>
+        <div style="font-size:1.1rem;letter-spacing:1px;color:var(--primary);font-weight:600;">&copy; 2025 Ram Morla.
+            All rights reserved.</div>
+        <div style="font-size:0.95rem;color:#aaa;margin-top:0.3rem;">Designed & built with ❤️ using HTML, CSS, and
+            JavaScript</div>
+    </footer>
+
+    <script>
+document.addEventListener('DOMContentLoaded', function() {
+// Show modal with content in center when clicking on any education item
+const eduData = {
+    btech: `<h3 style='color:var(--primary);margin-bottom:0.7em;'>B.Tech. in Computer Science</h3>
+        <p><strong>Institution:</strong> Chebrolu Engineering College</p>
+        <p><strong>Years:</strong> 2022 - 2026</p>
+        <p><strong>CGPA:</strong> 8.2/10</p>
+        <ul style='margin:0.7em 0 0 1.2em;text-align:left;'>
+          <li><strong>Relevant Coursework:</strong> Data Structures, Algorithms, Web Development, Machine Learning</li>              
+        </ul>`,
+    inter: `<h3 style='color:var(--primary);margin-bottom:0.7em;'>Intermediate in MPC</h3>
+        <p><strong>Institution:</strong> Sri Vishaka Junior College</p>
+        <p><strong>Years:</strong> 2020 - 2022</p>
+        <p><strong>Percentage:</strong> 91%</p>
+        <ul style='margin:0.7em 0 0 1.2em;text-align:left;'>
+          <li><strong>Subjects:</strong> Mathematics, Physics, Chemistry</li>
+         
+        </ul>`,
+    ssc: `<h3 style='color:var(--primary);margin-bottom:0.7em;'>SSC</h3>
+        <p><strong>Institution:</strong> Zilla Parishad High School</p>
+        <p><strong>Years:</strong> 2015 - 2020</p>
+        <p><strong>GPA:</strong> 9.7/10</p>`
+        /*<ul style='margin:0.7em 0 0 1.2em;text-align:left;'>
+          <li><strong>Achievements:</strong> School Topper, Science Fair Winner, Quiz Champion</li>
+        </ul>`*/
+};
+document.querySelectorAll('.timeline-item').forEach(item => {
+    item.addEventListener('click', function () {
+        const eduKey = this.getAttribute('data-edu');
+        document.getElementById('edu-modal-body').innerHTML = eduData[eduKey] || '<p>No details available for this item.</p>';
+        document.getElementById('edu-detail-modal').style.display = 'flex';
+    });
+});
+document.querySelector('.edu-modal-close').addEventListener('click', function () {
+    document.getElementById('edu-detail-modal').style.display = 'none';
+});
+window.addEventListener('click', function (event) {
+    const modal = document.getElementById('edu-detail-modal');
+    if (event.target == modal) {
+        modal.style.display = 'none';
+    }
+});
+
+// --- Auto-Scrolling Horizontal Cyclic Skills Carousel (Right to Left, Transparent) ---
+const skillsData = [
+  {
+    icon: '<span style="color:#e44d26;">&lt;/&gt;</span>',
+    name: 'HTML5',
+    percent: '95%'
+  },
+  {
+    icon: '<span style="color:#2965f1;">🎨</span>',
+    name: 'CSS3',
+    percent: '90%'
+  },
+  {
+    icon: '<span style="color:#f7df1e;">⚡</span>',
+    name: 'JavaScript',
+    percent: '88%'
+  },
+  {
+    icon: '<span style="color:#61dafb;">⚛️</span>',
+    name: 'React',
+    percent: '80%'
+  },
+  {
+    icon: '<span style="color:#3c873a;">🌐</span>',
+    name: 'Node.js',
+    percent: '75%'
+  },
+  {
+    icon: '<span style="color:#4db33d;">🍃</span>',
+    name: 'MongoDB',
+    percent: '70%'
+  },
+  {
+    icon: '<span style="color:#24292e;">🐙</span>',
+    name: 'Git',
+    percent: '85%'
+  }
+];
+const track = document.querySelector('.skills-auto-carousel-track');
+function renderAutoCarousel() {
+  // Duplicate the skills for seamless infinite scroll
+  let html = '';
+  for (let i = 0; i < 2; i++) {
+    for (const s of skillsData) {
+      html += `
+        <div class="skill-card auto-carousel-skill-card transparent-skill-card" tabindex="0">
+          <div class="skill-icon">${s.icon}</div>
+          <div class="skill-name">${s.name}</div>
+          <div class="skill-bar"><div class="skill-bar-fill" style="width:0" data-width="${s.percent}"></div></div>
+        </div>
+      `;
+    }
+  }
+  track.innerHTML = html;
+  setTimeout(() => {
+    track.querySelectorAll('.skill-bar-fill').forEach((bar, i) => {
+      const s = skillsData[i % skillsData.length];
+      bar.style.width = s.percent;
+    });
+  }, 100);
+}
+renderAutoCarousel();
+// Animate scroll (right to left)
+let scrollPos = 0;
+let cardWidth = 0;
+function updateCardWidth() {
+  const card = track.querySelector('.auto-carousel-skill-card');
+  cardWidth = card ? card.offsetWidth + 22 : 240; // 22px = gap
+}
+updateCardWidth();
+window.addEventListener('resize', updateCardWidth);
+function autoScroll() {
+  scrollPos -= 1;
+  if (Math.abs(scrollPos) >= cardWidth * skillsData.length) {
+    scrollPos = 0;
+  }
+  track.style.transform = `translateX(${scrollPos}px)`;
+  requestAnimationFrame(autoScroll);
+}
+requestAnimationFrame(autoScroll);
+// --- End Auto-Scrolling Horizontal Cyclic Skills Carousel ---
+
+    // Responsive Burger Menu for Mobile
+const burger = document.getElementById('burger');
+const navMenu = document.getElementById('nav-menu');
+burger.addEventListener('click', function () {
+    burger.classList.toggle('open');
+    navMenu.classList.toggle('open');
+    burger.setAttribute('aria-expanded', navMenu.classList.contains('open'));
+});
+burger.addEventListener('keydown', function (e) {
+    if (e.key === 'Enter' || e.key === ' ') {
+        burger.click();
+    }
+});
+// Close nav on link click (mobile UX)
+document.querySelectorAll('#nav-menu .nav-link').forEach(link => {
+    link.addEventListener('click', () => {
+        if (window.innerWidth <= 900) {
+            navMenu.classList.remove('open');
+            burger.classList.remove('open');
+            burger.setAttribute('aria-expanded', 'false');
+        }
+    });
+});
+
+// --- Scroll Progress Indicator ---
+const progressBar = document.getElementById('scroll-progress');
+window.addEventListener('scroll', () => {
+  const scrollTop = window.scrollY;
+  const windowHeight = window.innerHeight;
+  const documentHeight = document.documentElement.scrollHeight;
+  const scrollPercent = (scrollTop / (documentHeight - windowHeight)) * 100;
+  progressBar.style.width = `${scrollPercent}%`;
+});
+// --- End Scroll Progress Indicator ---
+
+// --- Custom Cursor ---
+const cursor = document.getElementById('custom-cursor');
+document.addEventListener('mousemove', (e) => {
+  const x = e.clientX;
+  const y = e.clientY;
+  cursor.style.transform = `translate3d(${x}px, ${y}px, 0)`;
+});
+document.addEventListener('mouseenter', () => {
+  cursor.style.display = 'block';
+});
+document.addEventListener('mouseleave', () => {
+  cursor.style.display = 'none';
+});
+// --- End Custom Cursor ---
+
+    // --- Animated Stats Counters ---
+    document.querySelectorAll('.stat-number').forEach(counter => {
+      const updateCount = () => {
+        const target = +counter.getAttribute('data-count');
+        const count = +counter.innerText;
+
+        // Determine increment based on target value and desired speed
+        const increment = target > 1000 ? Math.ceil(target / 100) : 1;
+
+        // Count up logic
+        if (count < target) {
+          counter.innerText = Math.min(count + increment, target);
+          requestAnimationFrame(updateCount);
+        } else {
+          counter.innerText = target;
+        }
+      };
+
+      // Start animation on scroll
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            updateCount();
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 1 });
+
+      observer.observe(counter);
+    });
+    // --- End Animated Stats Counters ---
+
+    // --- Real-time Form Validation ---
+    const form = document.getElementById('contact-form');
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      let isValid = true;
+
+      // Clear previous error messages
+      document.querySelectorAll('.form-error').forEach(el => el.innerText = '');
+
+      // Name validation
+      const name = form.elements['name'].value.trim();
+      if (name === '') {
+        isValid = false;
+        document.getElementById('name-error').innerText = 'Name is required.';
+      } else if (name.length < 3) {
+        isValid = false;
+        document.getElementById('name-error').innerText = 'Name must be at least 3 characters.';
+      }
+
+      // Email validation
+      const email = form.elements['email'].value.trim();
+      if (email === '') {
+        isValid = false;
+        document.getElementById('email-error').innerText = 'Email is required.';
+      } else if (!/\S+@\S+\.\S+/.test(email)) {
+        isValid = false;
+        document.getElementById('email-error').innerText = 'Email address is invalid.';
+      }
+
+      // Message validation
+      const message = form.elements['message'].value.trim();
+      if (message === '') {
+        isValid = false;
+        document.getElementById('message-error').innerText = 'Message is required.';
+      } else if (message.length < 10) {
+        isValid = false;
+        document.getElementById('message-error').innerText = 'Message must be at least 10 characters.';
+      }
+
+      if (isValid) {
+        // Submit form data to server or perform desired action
+        console.log('Form submitted:', { name, email, message });
+        // Reset form
+        form.reset();
+        // Show success message (optional)
+        alert('Message sent successfully!');
+      }
+    });
+    // --- End Real-time Form Validation ---
+});
+</script>
+</body>
+
+</html>
